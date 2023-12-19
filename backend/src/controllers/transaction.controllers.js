@@ -5,7 +5,7 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors.js");
 const createTransaction = catchAsyncErrors(async (req, res, next) => {
   try {
     const transactionDetails = req.body;
-    console.log(transactionDetails);
+    // console.log(transactionDetails);
     const response = await TransactionService.createTransaction(
       transactionDetails
     );

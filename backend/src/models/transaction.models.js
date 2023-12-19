@@ -10,7 +10,7 @@ const transactionSchema = new mongoose.Schema({
     validate: {
       validator: function (v) {
         // Validate that the account number is between 9 to 18 digits
-        return /^[0-9]{9,18}$/.test(v);
+        return /^[0-9]{8,18}$/.test(v);
       },
       message: (props) => `${props.value} is not a valid Account number!`,
     },
@@ -25,7 +25,7 @@ const transactionSchema = new mongoose.Schema({
     validate: {
       validator: function (v) {
         // Validate that the ifsc code is valid
-        return /^[A-Za-z]{4}\d{7}$/.test(v);
+        return /^[A-Z]{4}0\d{6}$/.test(v);
       },
       message: (props) => `${props.value} is not a valid IFSC code!`,
     },

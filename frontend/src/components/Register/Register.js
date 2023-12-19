@@ -8,8 +8,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Payment from "./Payment.js";
-import Form from "./Form.js";
+import Payment from "../PaymentForm/Payment.js";
+import Form from "../UserForm/Form.js";
 
 export default function Register() {
   const [activeStep, setActiveStep] = useState(0);

@@ -7,7 +7,7 @@ const UserService = {
       await user.save();
       return user;
     } catch (error) {
-      return null;
+      throw new Error(error.message);
     }
   },
 
@@ -16,7 +16,7 @@ const UserService = {
       const user = await User.findOne(query);
       return user;
     } catch (error) {
-      return null;
+      throw new Error(error.message);
     }
   },
 
@@ -27,11 +27,11 @@ const UserService = {
         new: true,
       });
       if (!user) {
-        return null;
+        throw new Error(error.message);
       }
       return user;
     } catch (error) {
-      return null;
+      throw new Error(error.message);
     }
   },
   async getUserAndDelete(id) {
@@ -39,7 +39,7 @@ const UserService = {
       await User.findByIdAndDelete(id);
       return { message: "Deleted successfully" };
     } catch (error) {
-      return null;
+      throw new Error(error.message);
     }
   },
 };

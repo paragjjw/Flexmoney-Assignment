@@ -1,0 +1,12 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.formElement {
+  margin-top: 10px;
+}
+
+.radioGroupLabel {
+  color: #000000bf;
+}

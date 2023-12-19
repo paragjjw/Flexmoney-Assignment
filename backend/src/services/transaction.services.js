@@ -7,7 +7,7 @@ const TransactionService = {
       await transaction.save();
       return { message: "Transaction created successfully" };
     } catch (error) {
-      return null;
+      throw new Error(error.message);
     }
   },
 };
