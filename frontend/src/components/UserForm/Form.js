@@ -46,7 +46,9 @@ export default function Form({
           } else {
             if (
               new Date().getMonth() ==
-              new Date(res.data.dateOfPayment).getMonth()
+                new Date(res.data.dateOfPayment).getMonth() &&
+              new Date().getFullYear() ==
+                new Date(res.data.dateOfPayment).getFullYear()
             ) {
               toast.info(
                 "You have already registered for the Yoga classes this month",
